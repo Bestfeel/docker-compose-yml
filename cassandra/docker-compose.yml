@@ -1,0 +1,7 @@
+cassandra:
+  container_name: cassandra
+  image: daocloud.io/library/cassandra:3.7
+  ports:
+   - "9042:9042"
+  expose:
+   - "9042"

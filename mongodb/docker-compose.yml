@@ -1,0 +1,7 @@
+mongodb:
+  container_name: mongodb
+  image: daocloud.io/library/mongo:3.4.2
+  ports:
+   - "27017:27017"
+  expose:
+   - "27017"

@@ -1,0 +1,9 @@
+gizwits:
+  container_name: elasticsearch5.0
+  image: elasticsearch
+  ports:
+   - "9200:9200"
+   - "9300:9300"
+  expose:
+   - "9200"
+   - "9300"

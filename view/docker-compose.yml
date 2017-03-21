@@ -1,0 +1,7 @@
+gizwits:
+  container_name: viewer
+  image: stratio/viewer
+  ports:
+   - "9000:9000"
+  expose:
+   - "9000"
