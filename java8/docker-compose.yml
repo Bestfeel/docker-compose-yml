@@ -1,0 +1,3 @@
+java8:
+  container_name: java8
+  image: gizwits/java8
