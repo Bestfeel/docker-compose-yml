@@ -1,8 +1,10 @@
 superset:
   container_name: superset
-  image: amancevice/superset
+  image: daocloud.io/gizwits2015/superset
+  environment:
+   - SQLALCHEMY_DATABASE_URI=mysql://root:root@172.16.10.252/superset?charset=utf8
   ports:
-   - "8088:8088"
+   - "80:8088"
   expose:
-   - "8088"
-  command: [superset-init]
+   - "80"
+  command: "superset runserver"
