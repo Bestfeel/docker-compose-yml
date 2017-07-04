@@ -1,6 +1,6 @@
 redis:
   container_name: redis
-  image: daocloud.io/daocloud/dao-redis:master-init
+  image: daocloud.io/library/redis
   ports:
    - "6379:6379"
   expose:
