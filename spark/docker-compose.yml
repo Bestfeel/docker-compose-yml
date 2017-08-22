@@ -1,0 +1,8 @@
+spark:
+  container_name: spark
+  image: daocloud.io/gizwits2015/bigdata-spark:2.2.0
+  ports:
+    - "8080:8080"
+#  command: ['bash','-c','while :; do clear; sleep 500; done']
+#command: ['spark-class','org.apache.spark.deploy.master.Master']
+  command: ["/usr/bin/supervisord", "--configuration=/spark/spark/conf/supervisord.conf"]

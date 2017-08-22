@@ -1,0 +1,5 @@
+spark:
+  container_name: spark
+  image: andypetrella/spark-notebook:0.7.0-scala-2.11.8-spark-2.1.1-hadoop-2.7.2-with-hive
+  ports:
+     - "9001:9001"

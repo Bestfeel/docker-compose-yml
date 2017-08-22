@@ -1,0 +1,10 @@
+nginx:
+  container_name: nginx
+  image: nginx
+  ports:
+   - "80:8000"
+  volumes:
+    - ./conf.d:/etc/nginx/conf.d/
+    - ./logs/:/var/log/nginx/
+    # - ./html:/usr/share/nginx/html
+  command: /bin/bash -c "nginx -g 'daemon off;'"
