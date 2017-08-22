@@ -3,7 +3,7 @@ mongodb:
   image: daocloud.io/library/mongo:3.4.2
   ports:
    - "27017:27017"
-  volumes:
-    - ./mongo/data:/data/db
-    - ./mongo/logs/:/var/log/mongodb/
-    - ./mongo/backup/:/backup/
+  # volumes:
+  #   - ./mongo/data:/data/db
+  #   - ./mongo/logs/:/var/log/mongodb/
+  #   - ./mongo/backup/:/backup/
