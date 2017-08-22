@@ -1,9 +1,11 @@
 rabbitmq:
   container_name: rabbitmq
-  image: daocloud.io/library/rabbitmq:3.5.3
+  image: daocloud.io/library/rabbitmq:3.6.5-management
   ports:
    - "15672:15672"
    - "5672:5672"
-  expose:
-   - "15672"
-   - "5672"
+  environment:
+      RABBITMQ_ERLANG_COOKIE: TOOHKEZEVYNWGFRYBBYD
+  volumes:
+    - ./rabbitmq/mnesia/:/var/lib/rabbitmq/mnesia/
+    - ./rabbitmq/backup/:/backup
