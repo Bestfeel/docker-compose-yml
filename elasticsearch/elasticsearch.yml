@@ -1,0 +1,9 @@
+cluster.name: gizwits-01
+node.name: rtbd0001
+network.host: ["_local_","_site_"]
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
+discovery.zen.ping.unicast.hosts: ["rtbd0001"]
+script.engine.groovy.inline.update: true
+action.auto_create_index: false
+node.attr.role: xlarge

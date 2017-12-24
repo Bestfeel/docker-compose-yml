@@ -1,0 +1,12 @@
+jenkins:
+  container_name: jenkins
+  image: jenkins/jenkins
+  ports:
+   - "8091:8080"
+   - "50000:8080"
+  expose:
+   - "8001"
+   - "50000"
+  volumes:
+      - /data/docker/jenkins/jenkins_home/:/var/jenkins_home/
+  # restart: always

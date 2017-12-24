@@ -1,11 +1,16 @@
 mysql:
   container_name: mysql
-  image: mysql
+  image: daocloud.io/library/mysql:5.6.32
   ports:
    - "3306:3306"
   expose:
    - "3306"
+  volumes:
+      - /data/docker/mysql/data/:/var/lib/mysql/
+      - /data/docker/mysql/logs/:/var/log/mysql/
+      - /data/docker/mysql/backup/:/backup/
   environment:
   - MYSQL_USER=root
   - MYSQL_ROOT_PASSWORD=root
   - MYSQL_DATABASE=test
+  restart: always

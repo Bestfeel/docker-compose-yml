@@ -7,5 +7,6 @@ rabbitmq:
   environment:
       RABBITMQ_ERLANG_COOKIE: TOOHKEZEVYNWGFRYBBYD
   volumes:
-    - ./rabbitmq/mnesia/:/var/lib/rabbitmq/mnesia/
-    - ./rabbitmq/backup/:/backup
+    - /data/docker/rabbitmq/rabbitmq/mnesia/:/var/lib/rabbitmq/mnesia/
+    - /data/docker/rabbitmq/rabbitmq/backup/:/backup
+  # restart: always

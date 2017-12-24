@@ -1,6 +1,11 @@
 gizwits:
   container_name: elasticsearch5.0
   image: elasticsearch
+  hostname: es
+  volumes:
+  - /data/docker/elasticsearch5/data:/usr/share/elasticsearch/data
+  - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+  - /data/docker/elasticsearch5/logs:/usr/share/elasticsearch/logs
   ports:
    - "9200:9200"
    - "9300:9300"

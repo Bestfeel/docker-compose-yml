@@ -1,0 +1,10 @@
+swagger:
+  container_name: swagger
+  image: swaggerapi/swagger-editor
+  ports:
+   - "8001:80"
+   - "8002:8080"
+  expose:
+   - "8001"
+   - "8002"
+  # restart: always

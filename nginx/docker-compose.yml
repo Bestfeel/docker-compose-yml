@@ -1,14 +1,16 @@
 nginx:
   container_name: nginx
   # image: daocloud.io/library/nginx
-  # image: nginx:1.9
-  image: fr3nd/nginx-autoindex
+  image: nginx:1.9
+  # image: fr3nd/nginx-autoindex
   ports:
    - "80:80"
+  environment:
+     - TZ=Asia/Shanghai
   volumes:
     - ./conf.d:/etc/nginx/conf.d/
     # - ./nginx.conf:/etc/nginx/nginx.conf
-    - ./logs/:/var/log/nginx/
-    # - ./:/usr/share/nginx/html
-    - ./:/usr/share/nginx/html/files:ro
+    - /data/docker/nginx/logs/:/var/log/nginx/
+    - ./html:/usr/share/nginx/html
+    # - ./:/usr/share/nginx/html/files:ro
   command: /bin/bash -c "nginx -g 'daemon off;'"

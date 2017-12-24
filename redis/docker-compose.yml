@@ -7,7 +7,8 @@ redis:
    - "6379"
   environment:
   - REDIS_PASS=**None**
-  # volumes:
-    # - ./redis/data:/data/
+  volumes:
+    - /data/docker/redis/data:/data/
   # command: redis-server --requirepass Go4gizwits
   # command: redis-server --appendonly yes --requirepass Go4gizwits
+  restart: always
